@@ -1,6 +1,10 @@
 /* Design System for The Berry Patch */
 @import url('https://fonts.googleapis.com/css2?family=Georgia&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
     --primary-red: #d32e25;
     --primary-green: #739657;
@@ -290,7 +294,7 @@ ul {
 
 .scroll-indicator {
     position: absolute;
-    bottom: 40px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -566,12 +570,18 @@ body {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     margin-top: 48px;
+    margin-bottom: 64px;
 }
 
 .process-step {
     display: flex;
     gap: 24px;
-    align-items: flex-start;
+    align-items: center;
+    background: var(--white);
+    padding: 24px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-subtle);
+    border: 1px solid rgba(0,0,0,0.04);
 }
 
 .step-icon {
@@ -1000,6 +1010,11 @@ body {
         grid-template-columns: 1fr;
         gap: 12px;
     }
+    .process-step {
+        padding: 16px;
+        gap: 16px;
+        border-radius: 16px;
+    }
     .lab-cards {
         grid-template-columns: 1fr;
         gap: 8px;
@@ -1072,7 +1087,7 @@ body {
         gap: 12px;
     }
     .promise-card .icon img {
-        height: 28px;
+        height: 40px;
     }
     .promise-card .divider {
         width: 1px;

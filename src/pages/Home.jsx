@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SnapSection from '../components/SnapSection';
-import HeroCarousel from '../components/HeroCarousel';
+import { CardCarousel } from '../components/ui/card-carousel';
 
 const Home = () => {
   return (
@@ -25,7 +25,16 @@ const Home = () => {
             </div>
           </div>
           <div className="hero-right">
-            <HeroCarousel />
+            <CardCarousel
+              images={[
+                { src: '/assets/real-farm.jpg', alt: 'The Berry Patch Farm' },
+                { src: '/assets/real-farm2.jpg', alt: 'Strawberry Farm Rows' },
+                { src: '/assets/real-berries.jpg', alt: 'Freshly Picked Berries' },
+              ]}
+              autoplayDelay={2000}
+              showPagination={true}
+              showNavigation={true}
+            />
           </div>
         </div>
         <div className="scroll-indicator">
