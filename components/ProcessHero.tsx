@@ -37,7 +37,7 @@ export default function ProcessHero() {
 
 
         <motion.p
-          className="font-sans text-[10px] tracking-[0.35em] uppercase text-berry mb-2"
+          className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-2 font-semibold"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}
         >
           From Farm to Table

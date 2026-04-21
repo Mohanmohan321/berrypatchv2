@@ -47,7 +47,7 @@ export default function CommitmentSection() {
     >
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-8">
 
-        <motion.p className="font-sans text-[10px] tracking-[0.35em] uppercase text-berry mb-3" {...reveal(0)}>
+        <motion.p className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-3 font-semibold" {...reveal(0)}>
           Our Promise
         </motion.p>
 

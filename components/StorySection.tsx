@@ -32,7 +32,7 @@ export default function StorySection() {
 
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-8 md:py-12">
 
-        <motion.p className="font-sans text-[10px] tracking-[0.35em] uppercase text-berry mb-6 md:mb-10 text-center" {...reveal(0)}>
+        <motion.p className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-6 md:mb-10 text-center font-semibold" {...reveal(0)}>
           The Origin
         </motion.p>
 
