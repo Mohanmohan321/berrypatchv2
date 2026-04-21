@@ -19,8 +19,8 @@ export default function Loader() {
         <Image
           src="/assets/logo.png"
           alt="The Berry Patch"
-          width={120}
-          height={120}
+          width={280}
+          height={280}
           className="object-contain"
           priority
         />
