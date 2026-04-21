@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import ScrollHint from './ScrollHint'
 
 const results = [
   { label: 'Pesticide Residue', value: 'Below LOQ', note: 'Limit of Quantification', pass: true },
@@ -20,19 +21,19 @@ const reveal = (delay = 0) => ({
 export default function LabReport() {
   return (
     <section
-      className="flex flex-col justify-center bg-white overflow-hidden"
+      className="relative flex flex-col justify-center bg-white overflow-hidden"
       style={{ height: '100dvh', scrollSnapAlign: 'start', scrollSnapStop: 'always' }}
     >
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-8">
 
-        <motion.p className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-4 font-semibold" {...reveal(0)}>
+        <motion.p className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-6 font-semibold text-center" {...reveal(0)}>
           Lab Report Summary
         </motion.p>
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <motion.h2 className="font-serif text-2xl md:text-4xl font-bold text-charcoal leading-tight max-w-lg" {...reveal(0.08)}>
-            Every batch tested.{' '}
-            <span className="italic font-normal text-muted">Every result published.</span>
+            Independently lab tested.{' '}
+            <span className="italic font-normal text-muted">Zero residues detected.</span>
           </motion.h2>
           <motion.div className="flex items-center gap-3 shrink-0" {...reveal(0.16)}>
             <Image src="/assets/ICAR.png" alt="ICAR-IIHR" width={40} height={40} className="object-contain" />
@@ -59,10 +60,9 @@ export default function LabReport() {
           ))}
         </div>
 
-        <motion.p className="font-sans text-[10px] tracking-[0.25em] uppercase text-muted/50 text-center" {...reveal(0.3)}>
-          Swipe to view report pages →
-        </motion.p>
+
       </div>
+      <ScrollHint />
     </section>
   )
 }

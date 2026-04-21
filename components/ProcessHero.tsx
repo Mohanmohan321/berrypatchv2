@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import ScrollHint from './ScrollHint'
 
 const steps = [
   {
@@ -29,7 +30,7 @@ const steps = [
 export default function ProcessHero() {
   return (
     <section
-      className="flex flex-col justify-center bg-white overflow-hidden"
+      className="relative flex flex-col justify-center bg-white overflow-hidden"
       style={{ height: '100dvh', scrollSnapAlign: 'start', scrollSnapStop: 'always' }}
     >
       <div className="max-w-7xl mx-auto w-full px-5 md:px-12 py-6">
@@ -37,7 +38,7 @@ export default function ProcessHero() {
 
 
         <motion.p
-          className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-2 font-semibold"
+          className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-6 font-semibold text-center"
           initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65 }}
         >
           From Farm to Table
@@ -69,8 +70,8 @@ export default function ProcessHero() {
               transition={{ duration: 0.6, delay: 0.2 + i * 0.07 }}
             >
               <div className="flex items-start justify-between mb-3">
-                <span className="text-charcoal/25 group-hover:text-berry/30 transition-colors duration-300">{step.icon}</span>
-                <span className="font-serif text-2xl font-bold text-charcoal/8 leading-none">{step.number}</span>
+                <span className="text-green-600 group-hover:text-green-700 transition-colors duration-300">{step.icon}</span>
+                <span className="font-serif text-2xl font-bold text-charcoal/30 leading-none">{step.number}</span>
               </div>
               <h3 className="font-serif text-sm md:text-base font-semibold text-charcoal mb-1">{step.title}</h3>
               <p className="font-sans text-[11px] md:text-xs text-muted leading-[1.6]">{step.body}</p>
@@ -78,6 +79,7 @@ export default function ProcessHero() {
           ))}
         </div>
       </div>
+      <ScrollHint />
     </section>
   )
 }

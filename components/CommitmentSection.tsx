@@ -22,7 +22,7 @@ const promises = [
   },
   {
     title: 'ICAR‑IIHR Certified',
-    body: 'Every harvest is independently tested by government-accredited scientists at ICAR‑IIHR.',
+    body: 'Independently tested by government-accredited scientists at ICAR‑IIHR. Zero residues detected across 130+ compounds.',
     icon: (
       <img src="/assets/ICAR.png" alt="ICAR-IIHR" width={20} height={20} className="object-contain" />
     ),
@@ -47,7 +47,7 @@ export default function CommitmentSection() {
     >
       <div className="max-w-7xl mx-auto w-full px-6 md:px-12 py-8">
 
-        <motion.p className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-3 font-semibold" {...reveal(0)}>
+        <motion.p className="font-sans text-sm tracking-[0.35em] uppercase text-berry mb-6 font-semibold text-center" {...reveal(0)}>
           Our Promise
         </motion.p>
 
@@ -65,7 +65,7 @@ export default function CommitmentSection() {
               className="rounded-2xl border border-border p-5 md:p-6 hover:shadow-sm hover:border-charcoal/20 transition-all duration-300 cursor-default"
               {...reveal(0.2 + i * 0.08)}
             >
-              <div className="text-charcoal/50 mb-4">{p.icon}</div>
+              <div className="text-green-600 mb-4">{p.icon}</div>
               <h3 className="font-serif text-base md:text-lg font-semibold text-charcoal mb-1.5">{p.title}</h3>
               <p className="font-sans text-xs md:text-[13px] text-muted leading-[1.75]">{p.body}</p>
             </motion.div>

@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useCallback, useState } from 'react'
 import Image from 'next/image'
+import ScrollHint from './ScrollHint'
 
 const MIN = 1
 const MAX = 5
@@ -132,7 +133,7 @@ function ReportPage({ src, label }: { src: string; label: string }) {
 
   return (
     <section
-      className="flex flex-col bg-[#F2F2F0] overflow-hidden"
+      className="relative flex flex-col bg-[#F2F2F0] overflow-hidden"
       style={{ height: '100dvh', scrollSnapAlign: 'start', scrollSnapStop: 'always' }}
     >
       {/* Toolbar */}
@@ -191,6 +192,7 @@ function ReportPage({ src, label }: { src: string; label: string }) {
           </div>
         </div>
       </div>
+      <ScrollHint />
     </section>
   )
 }
