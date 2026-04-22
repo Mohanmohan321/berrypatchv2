@@ -141,18 +141,18 @@ function ReportPage({ src, label }: { src: string; label: string }) {
         <span className="font-sans text-[10px] tracking-[0.3em] uppercase text-muted">{label}</span>
         <div className="flex items-center gap-2">
           <button onClick={() => bump(-0.5)} aria-label="Zoom out"
-            className="w-7 h-7 flex items-center justify-center rounded-md bg-black/5 text-charcoal/60 hover:bg-black/10 hover:text-charcoal transition-colors cursor-pointer text-base select-none">−</button>
+            className="w-9 h-9 md:w-7 md:h-7 flex items-center justify-center rounded-md bg-black/5 text-charcoal/60 hover:bg-black/10 hover:text-charcoal transition-colors cursor-pointer text-lg md:text-base select-none">-</button>
           <span className="font-sans text-xs text-muted w-10 text-center tabular-nums">
             {Math.round(display.s * 100)}%
           </span>
           <button onClick={() => bump(0.5)} aria-label="Zoom in"
-            className="w-7 h-7 flex items-center justify-center rounded-md bg-black/5 text-charcoal/60 hover:bg-black/10 hover:text-charcoal transition-colors cursor-pointer text-base select-none">+</button>
+            className="w-9 h-9 md:w-7 md:h-7 flex items-center justify-center rounded-md bg-black/5 text-charcoal/60 hover:bg-black/10 hover:text-charcoal transition-colors cursor-pointer text-lg md:text-base select-none">+</button>
           <button onClick={() => commit(1, 0, 0)}
-            className="font-sans text-[10px] tracking-wide uppercase text-muted hover:text-charcoal transition-colors cursor-pointer ml-1 select-none">Reset</button>
+            className="font-sans text-sm md:text-[10px] tracking-wide uppercase text-muted hover:text-charcoal transition-colors cursor-pointer ml-1 select-none">Reset</button>
         </div>
       </div>
 
-      {/* Centred document — explicit dimensions computed from viewport so it never collapses */}
+      {/* Centred document â€” explicit dimensions computed from viewport so it never collapses */}
       <div className="flex-1 min-h-0 flex items-center justify-center p-3 md:p-5">
         <div
           ref={containerRef}
@@ -200,8 +200,9 @@ function ReportPage({ src, label }: { src: string; label: string }) {
 export default function LabPDFSection() {
   return (
     <>
-      <ReportPage src="/assets/report_p1.png" label="Lab Report · Page 1 of 2" />
-      <ReportPage src="/assets/report_p2.png" label="Lab Report · Page 2 of 2" />
+      <ReportPage src="/assets/report_p1.png" label="Lab Report - Page 1 of 2" />
+      <ReportPage src="/assets/report_p2.png" label="Lab Report - Page 2 of 2" />
     </>
   )
 }
+

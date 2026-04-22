@@ -10,7 +10,7 @@ export default function ScrollHint() {
       animate={{ opacity: 1 }}
       transition={{ delay: 1, duration: 0.8 }}
     >
-      <div className="flex flex-col items-center px-4 py-2 rounded-full bg-charcoal/[0.03] backdrop-blur-[2px]">
+      <div className="flex flex-col items-center">
         <span className="font-sans text-[9px] tracking-[0.3em] font-bold uppercase text-charcoal select-none mb-1">
           Scroll Down
         </span>

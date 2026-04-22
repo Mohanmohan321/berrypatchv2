@@ -17,7 +17,7 @@ const steps = [
   },
   {
     number: '03', title: 'Inspected & Lab Tested',
-    body: 'Every batch is tested for 130+ pesticide compounds via LCMS-MS and GCMS-MS panels.',
+    body: 'Tested at an ICAR accredited lab for 130+ pesticide compounds via LCMS-MS and GCMS-MS panels.',
     icon: (<svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" /></svg>),
   },
   {
@@ -48,8 +48,7 @@ export default function ProcessHero() {
           className="font-serif text-2xl md:text-4xl lg:text-5xl font-bold text-charcoal leading-tight mb-2"
           initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.08 }}
         >
-          How we grow,{' '}
-          <span className="italic font-normal text-muted">test &amp; deliver.</span>
+          How we grow, test &amp; deliver.
         </motion.h1>
 
         <motion.p

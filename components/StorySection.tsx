@@ -32,8 +32,7 @@ export default function StorySection() {
           className="font-serif text-xl md:text-3xl lg:text-4xl italic font-normal text-charcoal leading-[1.4] text-center max-w-3xl mx-auto mb-10 md:mb-16"
           {...reveal(0.1)}
         >
-          &ldquo;When you eat our berries, you aren&rsquo;t just tasting fruit.
-          You&rsquo;re tasting the Kodaikanal mist.&rdquo;
+          &ldquo;In the quiet hills of Kodaikanal, The Berry Patch began with a simple idea - to grow strawberries the right way.&rdquo;
         </motion.blockquote>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -60,10 +59,10 @@ export default function StorySection() {
               Our Story
             </motion.h2>
             <motion.p className="font-sans text-sm md:text-[15px] text-muted leading-[1.8]" {...reveal(0.22)}>
-              Nestled at 2,100 metres above sea level, our farm sits where the clouds touch the hills of Kodaikanal. The cool mist, the rich soil, and the patience of our farmers create strawberries unlike anything grown in the plains below.
+              We work with local farmers - no shortcuts, no chemicals. Grown organically in Kodaikanal&apos;s cool hills, just as nature intended.
             </motion.p>
-            <motion.p className="font-sans text-sm md:text-[15px] text-muted leading-[1.8] hidden md:block" {...reveal(0.29)}>
-              We grow the Camarosa variety — known for its deep red colour, intense sweetness, and firm texture. No synthetic pesticides. No shortcuts. Every batch is tested by ICAR‑IIHR certified laboratories.
+            <motion.p className="font-sans text-sm md:text-[15px] text-muted leading-[1.8]" {...reveal(0.29)}>
+              We chose the Camarosa variety - handpicked and lab-tested by ICAR-IIHR Bangalore with zero pesticide residue across 130+ compounds.
             </motion.p>
 
           </div>

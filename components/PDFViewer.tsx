@@ -28,12 +28,12 @@ function ReportPage({ src, label }: { src: string; label: string }) {
 
     const ptrs = new Map<number, PointerEvent>()
 
-    // ── drag state ─────────────────────────────
+    // â”€â”€ drag state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     let dragging = false
     let dragLastX = 0
     let dragLastY = 0
 
-    // ── pinch state ────────────────────────────
+    // â”€â”€ pinch state â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     let pinchStartDist = 0
     let pinchStartS = 1
     let pinchCx = 0   // midpoint relative to container
@@ -64,7 +64,7 @@ function ReportPage({ src, label }: { src: string; label: string }) {
       commit(newS, clamped.x, clamped.y)
     }
 
-    // ── pointer events ─────────────────────────
+    // â”€â”€ pointer events â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
     function onDown(e: PointerEvent) {
       container.setPointerCapture(e.pointerId)
       ptrs.set(e.pointerId, e)
@@ -158,24 +158,24 @@ function ReportPage({ src, label }: { src: string; label: string }) {
           <button
             onClick={() => bump(-0.5)}
             aria-label="Zoom out"
-            className="w-7 h-7 flex items-center justify-center rounded-md bg-white/8 text-cream/60 hover:bg-white/20 hover:text-cream transition-colors cursor-pointer text-base select-none"
-          >−</button>
+            className="w-9 h-9 md:w-7 md:h-7 flex items-center justify-center rounded-md bg-white/8 text-cream/60 hover:bg-white/20 hover:text-cream transition-colors cursor-pointer text-lg md:text-base select-none"
+          >-</button>
           <span className="font-sans text-xs text-cream/40 w-10 text-center tabular-nums">
             {Math.round(display.s * 100)}%
           </span>
           <button
             onClick={() => bump(0.5)}
             aria-label="Zoom in"
-            className="w-7 h-7 flex items-center justify-center rounded-md bg-white/8 text-cream/60 hover:bg-white/20 hover:text-cream transition-colors cursor-pointer text-base select-none"
+            className="w-9 h-9 md:w-7 md:h-7 flex items-center justify-center rounded-md bg-white/8 text-cream/60 hover:bg-white/20 hover:text-cream transition-colors cursor-pointer text-lg md:text-base select-none"
           >+</button>
           <button
             onClick={reset}
-            className="font-sans text-[10px] tracking-wide uppercase text-cream/30 hover:text-cream/60 transition-colors cursor-pointer ml-1 select-none"
+            className="font-sans text-sm md:text-[10px] tracking-wide uppercase text-cream/30 hover:text-cream/60 transition-colors cursor-pointer ml-1 select-none"
           >Reset</button>
         </div>
       </div>
 
-      {/* Fixed viewport — overflow hidden, no scroll */}
+      {/* Fixed viewport â€” overflow hidden, no scroll */}
       <div
         ref={containerRef}
         className="relative overflow-hidden select-none bg-white"
@@ -231,3 +231,4 @@ export default function PDFViewer() {
     </div>
   )
 }
+

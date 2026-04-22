@@ -32,8 +32,7 @@ export default function LabReport() {
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <motion.h2 className="font-serif text-2xl md:text-4xl font-bold text-charcoal leading-tight max-w-lg" {...reveal(0.08)}>
-            Independently lab tested.{' '}
-            <span className="italic font-normal text-muted">Zero residues detected.</span>
+            Independently lab tested. Zero residues detected.
           </motion.h2>
           <motion.div className="flex items-center gap-3 shrink-0" {...reveal(0.16)}>
             <Image src="/assets/ICAR.png" alt="ICAR-IIHR" width={40} height={40} className="object-contain" />

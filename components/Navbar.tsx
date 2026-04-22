@@ -35,7 +35,7 @@ export default function Navbar() {
       }`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.7, delay: 2.3, ease: [0.25, 0.1, 0.25, 1] }}
+      transition={{ duration: 0.7, delay: 0.11, ease: [0.25, 0.1, 0.25, 1] }}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 cursor-pointer">

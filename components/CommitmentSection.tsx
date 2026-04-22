@@ -52,10 +52,7 @@ export default function CommitmentSection() {
         </motion.p>
 
         <motion.h2 className="font-serif text-2xl md:text-4xl font-bold text-charcoal leading-tight mb-8" {...reveal(0.08)}>
-          Our Commitment
-          <span className="block italic font-normal text-muted text-xl md:text-3xl mt-1">
-            to you and the land.
-          </span>
+          Our Commitment to you and the land.
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
